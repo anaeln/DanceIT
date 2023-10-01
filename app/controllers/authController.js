@@ -20,9 +20,9 @@ class AuthController {
   }
 
   async login(req, res) {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
     try {
-      const userEmail = await authService.login(username, password);
+      const userEmail = await authService.login(email, password);
 
       if (userEmail) {
         req.session.userKey = userEmail;

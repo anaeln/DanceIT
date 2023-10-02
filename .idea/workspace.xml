@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64bf620b-aecc-4edd-b22c-68e08a58d5a0" name="Changes" comment="revert env">
+    <list default="true" id="64bf620b-aecc-4edd-b22c-68e08a58d5a0" name="Changes" comment="git ignore env">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -75,7 +75,7 @@
       <workItem from="1696180573205" duration="608000" />
       <workItem from="1696257473029" duration="208000" />
       <workItem from="1696257684070" duration="9586000" />
-      <workItem from="1696288740772" duration="1761000" />
+      <workItem from="1696288740772" duration="2066000" />
     </task>
     <task id="LOCAL-00001" summary="fix env file">
       <option name="closed" value="true" />
@@ -133,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696290312855</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="git ignore env">
+      <option name="closed" value="true" />
+      <created>1696290769349</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696290769349</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +165,8 @@
     <MESSAGE value="add key" />
     <MESSAGE value="add env files to ignore" />
     <MESSAGE value="revert env" />
-    <option name="LAST_COMMIT_MESSAGE" value="revert env" />
+    <MESSAGE value="git ignore env" />
+    <option name="LAST_COMMIT_MESSAGE" value="git ignore env" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

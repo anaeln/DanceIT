@@ -15,6 +15,4 @@ const StudioSchema=new Schema({
         required: true,
     }
 })
-
-
 module.exports=model('Studio',StudioSchema);

@@ -6,7 +6,6 @@ const layoutPage = path.join(__dirname, './app/views');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const router = require(path.join(__dirname, './config/index.js'));
-
 const PORT = process.env.PORT || 8089;
 app.use(
   session({

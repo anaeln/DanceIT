@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64bf620b-aecc-4edd-b22c-68e08a58d5a0" name="Changes" comment="edit">
-      <change afterPath="$PROJECT_DIR$/app/models/studioModel.js" afterDir="false" />
+    <list default="true" id="64bf620b-aecc-4edd-b22c-68e08a58d5a0" name="Changes" comment="git ignore env">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/studiosController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/studiosController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/studioModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/studioModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/studioService.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/studioService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/studios.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/studios.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;studiosMap&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;studioModel&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/yarinr25/Documents/Data Science Bsc/Current Classes/Web Applications Development/DanceIT&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -79,6 +83,7 @@
       <workItem from="1696288740772" duration="2813000" />
       <workItem from="1696291575257" duration="355000" />
       <workItem from="1696320021861" duration="531000" />
+      <workItem from="1696349805922" duration="4702000" />
     </task>
     <task id="LOCAL-00001" summary="fix env file">
       <option name="closed" value="true" />

@@ -10,8 +10,7 @@ class studiosController {
         try {
             const contentPage = 'studios.ejs';
             const apiKey = process.env.GOOGLE_API_KEY
-            res.render('layout', { content: contentPage });
-            res.render('studios', { apiKey });
+            res.render('layout', {apiKey: apiKey ,content: contentPage });
         } catch (e) {
             res.redirect('/register?error=1');
         }

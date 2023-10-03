@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64bf620b-aecc-4edd-b22c-68e08a58d5a0" name="Changes" comment="edit env" />
+    <list default="true" id="64bf620b-aecc-4edd-b22c-68e08a58d5a0" name="Changes" comment="edit">
+      <change afterPath="$PROJECT_DIR$/app/models/studioModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/studiosController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/studiosController.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +76,9 @@
       <workItem from="1696180573205" duration="608000" />
       <workItem from="1696257473029" duration="208000" />
       <workItem from="1696257684070" duration="9586000" />
-      <workItem from="1696288740772" duration="2418000" />
+      <workItem from="1696288740772" duration="2813000" />
+      <workItem from="1696291575257" duration="355000" />
+      <workItem from="1696320021861" duration="531000" />
     </task>
     <task id="LOCAL-00001" summary="fix env file">
       <option name="closed" value="true" />
@@ -146,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696290818773</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="edit">
+      <option name="closed" value="true" />
+      <created>1696291371317</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696291371317</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +186,8 @@
     <MESSAGE value="revert env" />
     <MESSAGE value="git ignore env" />
     <MESSAGE value="edit env" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit env" />
+    <MESSAGE value="edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

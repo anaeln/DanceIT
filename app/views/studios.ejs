@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    #map{
+        height: 600px;
+        width: 100%
+    }
+</style>
+<body>
+    <div class="container" id="map">
+    </div>
+
+
+   <script>
+       function initMap()
+       {
+           var options = {
+               zoom:13,
+               center:{lat:31.795661077000744, lng:34.64098490948224}
+           }
+           var map = new google.maps.Map(document.getElementById('map'), options)
+           var studios = [
+               {
+                   studioName: "סטודיו רובע ה",
+                   coords:{lat:31.79845251793844, lng:34.64850522407714},
+               },
+               {
+                   studioName: "סטודיו רובע א",
+                   coords:{lat:31.811606918834556, lng:34.645735026239095},
+               },
+           ]
+           function addMarker(props)
+           {
+               var marker = new google.maps.Marker({
+                   position: props.coords,
+                   map: map,
+               });
+               var infoWindow = new google.maps.InfoWindow({
+                   content:props.studioName
+               });
+
+               marker.addListener('click', function (){
+                   infoWindow.open(map, marker);
+
+
+               });
+            }
+
+            for(var i=0; i<studios.length; i++){
+               addMarker(studios[i])
+           }
+       }
+   </script>
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=<%= apiKey %>&callback=initMap">
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

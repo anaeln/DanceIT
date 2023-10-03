@@ -1,14 +1,52 @@
-<!doctype html>
-<html lang="en">
-<body>
-  <ul>
-    <li><a href="/profile">Profile</a></li>
-    <li><a href="/posts">Posts</a></li>
-    <li><a href="/logout">logout</a></li>
-    <li><a href="/studios">Studios</a></li>
 
-  </ul>
-  <main><%- include(content) %></main>
-  </body>
-</html>
-
+<!-- TODO: Move style to CSS file in public dir -->
+<style>
+    .nav-pills > li > a:hover {
+      opacity: 0.5;
+  }
+  #chat{
+      position: fixed;
+      bottom: -4px;
+      right: 10px;
+  }
+  </style>
+  
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="/css/sideBar.css">
+  
+   <div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" style="background-color: #323333;">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
+                <div class="dropdown pb-4">
+                  <a href="profile" class="nav-link align-middle px-0">
+                  <img src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" alt="hugenerd" width="80" height="80" class="rounded-circle">
+                  </a>
+                </div>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="post" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house text-white"></i> <span class="ms-1 d-none d-sm-inline text-white" style="font-weight: bold;">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="studios" class="nav-link align-middle px-0">
+                            <i class="fs-5 bi-map text-white"></i> <span class="ms-1 d-none d-sm-inline text-white" style="font-weight: bold;">My studios</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="communication" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-person-check-fill text-white"></i> <span class="ms-1 d-none d-sm-inline text-white" style="font-weight: bold;">Communication</span> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col py-3">
+          <main><%- include(content) %></main>
+        </div>
+    </div>
+  </div>
+  
+  <div id="chat">
+     <a href="chat" class="btn btn-primary" role="button"><i class="fs-4 bi-chat"></i> <span class="ms-1 d-none d-sm-inline text-white" style="font-weight: bold;">Chat</span></a>
+      </div>

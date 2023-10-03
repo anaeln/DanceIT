@@ -6,12 +6,21 @@ class ProfileService {
     if (!user) {
       throw new Error('User with this Email don`t found');
     }
-    const userData = {
+    const userDetails = {
       email: user.email,
       fullName: user.fullName,
     };
-    return userData;
+    return userDetails;
   }
+
+  async updateOptionalFields(id) {
+    const user = await UserModel.findById(id);
+
+
+
+  }
+
+
 }
 
 module.exports = new ProfileService();

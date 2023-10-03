@@ -7,4 +7,5 @@ const profileController = require(path.join(__dirname, '../controllers/profileCo
 
 router.get('/profile', authMiddleware, profileController.userInfo);
 
+
 module.exports = router;

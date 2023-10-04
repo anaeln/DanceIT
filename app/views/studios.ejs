@@ -8,32 +8,30 @@
     }
 </style>
 <body>
+    <div class="container" id="studiosList">
+        <ol>
+            <% for (let i = 0; i < studios.length; i++) { %>
+                <li><%= studios[i].Coords %></li>
+            <% } %>
+        </ol>
+    </div>
     <div class="container" id="map">
     </div>
 
 
    <script>
-       function initMap()
+       const studios = '<%- JSON.stringify(studios) %>';
+       const parsedStudios = JSON.parse(studios);
+      function initMap()
        {
            var options = {
                zoom:13,
                center:{lat:31.795661077000744, lng:34.64098490948224}
            }
            var map = new google.maps.Map(document.getElementById('map'), options)
-           var studios = [
-               {
-                   studioName: "סטודיו רובע ה",
-                   coords:{lat:31.79845251793844, lng:34.64850522407714},
-               },
-               {
-                   studioName: "סטודיו רובע א",
-                   coords:{lat:31.811606918834556, lng:34.645735026239095},
-               },
-           ]
-           function addMarker(props)
-           {
+           function addMarker(props) {
                var marker = new google.maps.Marker({
-                   position: props.coords,
+                   position: {lat: props.Coords[0], lng:props.Coords[1]},
                    map: map,
                });
                var infoWindow = new google.maps.InfoWindow({
@@ -42,13 +40,11 @@
 
                marker.addListener('click', function (){
                    infoWindow.open(map, marker);
-
-
                });
             }
-
-            for(var i=0; i<studios.length; i++){
-               addMarker(studios[i])
+            for(var i=0; i<parsedStudios.length; i++){
+                console.log(parsedStudios[i]);
+               addMarker(parsedStudios[i]);
            }
        }
    </script>

@@ -13,13 +13,10 @@ class ProfileService {
     return userDetails;
   }
 
-  async updateOptionalFields(id) {
-    const user = await UserModel.findById(id);
-
-
-
+  /* UPDATE */
+  async updateUserInfo(id, fields) {
+   return UserModel.findOneAndUpdate({id}, fields);
   }
-
 
 }
 

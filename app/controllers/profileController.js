@@ -13,7 +13,6 @@ class profileController {
 
     try {
       const userInfo = await profileService.getUser(sessionId);
-
       const { email, fullName } = userInfo;
       const contentPage = 'profile.ejs';
       res.render('layout', { username: email, content: contentPage });

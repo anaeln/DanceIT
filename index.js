@@ -17,7 +17,7 @@ app.use(
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, './app/public')))
 app.set('views', layoutPage);
 
 app.use('/', router);

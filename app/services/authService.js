@@ -16,7 +16,7 @@ class AuthService {
       password: hashPassword,
     });
 
-    return user._id;
+    return user.email;
   }
 
   async login(email, password) {
@@ -29,7 +29,7 @@ class AuthService {
     if (!isPasswordEquals) {
       throw new Error('Invalid password');
     }
-    return user._id;
+    return user.email;
   }
 }
 

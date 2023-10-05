@@ -23,7 +23,7 @@ class AuthController {
     const { email, password } = req.body;
     try {
       const userEmail = await authService.login(email, password);
-
+      
       if (userEmail) {
         req.session.userKey = userEmail;
         res.redirect('/profile');

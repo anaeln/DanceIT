@@ -1,8 +1,8 @@
 const UserModel = require('../models/userModel');
 
 class ProfileService {
-  async getUser(id) {
-    const user = await UserModel.findById(id);
+  async getUser(email) {
+    const user = await UserModel.findOne({email});
     if (!user) {
       throw new Error('User with this Email don`t found');
     }

@@ -1,16 +1,63 @@
-<div>
-  <ul>
-    <li>
-      <h1>Post 1</h1>
-      <div>messages</div>
-    </li>
-    <li>
-      <h1>Post 2</h1>
-      <div>messages</div>
-    </li>
-    <li>
-      <h1>Post 3</h1>
-      <div>messages</div>
-    </li>
-  </ul>
+<style>
+  /* Style for the post container */
+.post-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Style for each individual post */
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the publish time */
+.post p:nth-child(odd) {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Style for the post content */
+.post p:nth-child(even) {
+  margin-bottom: 16px;
+}
+</style>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Get all posts -->
+<div class="post-container">
+  <% if (posts && posts.length > 0) { %>
+    <% posts.forEach(post => { %>
+      <div class="post">
+        <p><strong><%= post.postContent %></strong></p>
+        <p><strong><%= post.postMedia %></strong></p>
+        <p><strong>Publish Time:</strong> <%= new Date(post.publishTime).toLocaleString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric', 
+          hour: 'numeric', 
+          minute: 'numeric', 
+          second: 'numeric' 
+        }) %></p>
+      </div>
+    <% }); %>
+  <% } else { %>
+    <p>No posts available.</p>
+  <% } %>
+</div>
+<br>
+
+<!-- Create post -->
+<div class="post-container">
+<form action="/posts/create" method="post">
+  <div class="post">
+    <input type="text" class="post" id="postContent" name="postContent" for="postContent" placeholder="Write your content here...">
+    <input type="text" class="post" id="postMedia" name="postMedia" for="postMedia" placeholder="Insert media">
+    <button type="submit" class="btn btn-primary">Create</button>
+  </div>
+</form>
 </div>

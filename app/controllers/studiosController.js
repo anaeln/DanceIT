@@ -1,3 +1,8 @@
+const path = require('node:path');
+
+const studioService = require(path.join(__dirname, '../services/studioService.js'));
+
+
 class studiosController {
     render(data) {
         const pageName = req.path.substring(1);
@@ -10,8 +15,8 @@ class studiosController {
         try {
             const contentPage = 'studios.ejs';
             const apiKey = process.env.GOOGLE_API_KEY
-            res.render('layout', { content: contentPage });
-            res.render('studios', { apiKey });
+            const studios = await studioService.getStudios()
+            res.render('layout', {studios: studios, apiKey: apiKey ,content: contentPage });
         } catch (e) {
             res.redirect('/register?error=1');
         }

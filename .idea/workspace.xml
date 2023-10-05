@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64bf620b-aecc-4edd-b22c-68e08a58d5a0" name="Changes" comment="git ignore env">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="64bf620b-aecc-4edd-b22c-68e08a58d5a0" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/app/public/media/other/favorite.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/studios.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/studios.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,22 +45,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;studiosMap&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/yarinr25/Documents/Data Science Bsc/Current Classes/Web Applications Development/DanceIT&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "studioPageUX",
+    "last_opened_file_path": "/Users/yarinr25/Documents/Data Science Bsc/Current Classes/Web Applications Development/DanceIT",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/public/media/other" />
+      <recent name="$PROJECT_DIR$/app/public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,7 +83,10 @@
       <workItem from="1696180573205" duration="608000" />
       <workItem from="1696257473029" duration="208000" />
       <workItem from="1696257684070" duration="9586000" />
-      <workItem from="1696288740772" duration="2066000" />
+      <workItem from="1696288740772" duration="2813000" />
+      <workItem from="1696291575257" duration="355000" />
+      <workItem from="1696320021861" duration="531000" />
+      <workItem from="1696349805922" duration="24500000" />
     </task>
     <task id="LOCAL-00001" summary="fix env file">
       <option name="closed" value="true" />
@@ -141,7 +152,39 @@
       <option name="project" value="LOCAL" />
       <updated>1696290769349</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="edit env">
+      <option name="closed" value="true" />
+      <created>1696290818773</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696290818773</updated>
+    </task>
+    <task id="LOCAL-00010" summary="edit">
+      <option name="closed" value="true" />
+      <created>1696291371317</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696291371317</updated>
+    </task>
+    <task id="LOCAL-00011" summary="print studios dynamiclly">
+      <option name="closed" value="true" />
+      <created>1696357317934</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696357317934</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update">
+      <option name="closed" value="true" />
+      <created>1696404195462</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696404195462</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +209,11 @@
     <MESSAGE value="add env files to ignore" />
     <MESSAGE value="revert env" />
     <MESSAGE value="git ignore env" />
-    <option name="LAST_COMMIT_MESSAGE" value="git ignore env" />
+    <MESSAGE value="edit env" />
+    <MESSAGE value="edit" />
+    <MESSAGE value="print studios dynamiclly" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

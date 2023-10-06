@@ -13,9 +13,10 @@ const PostSchema=new Schema({
         type: String, // Text content
         required: true,
       },
-    postMedia: {
-        type: String, // URL to photo or video (optional)
-      },
+    img: {
+      data: Buffer,
+      contentType: String
+    },
     group: {
         type: String, // Group name (text)
       },
@@ -25,4 +26,5 @@ const PostSchema=new Schema({
       },
     });
 
-module.exports=model('Post',PostSchema);
+module.exports = model('Post',PostSchema);
+

@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 const path = require('node:path');
 const layoutPage = path.join(__dirname, './app/views');
@@ -15,10 +16,12 @@ app.use(
     resave: false,
   }),
 );
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static('public'));
+app.use(express.static('/app/public'));
 app.set('views', layoutPage);
 
 app.use('/', router);

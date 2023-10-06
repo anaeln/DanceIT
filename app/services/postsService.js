@@ -1,16 +1,22 @@
 const PostModel = require('../models/postModel');
+const path = require('node:path');
+var fs = require('fs');
+
 
 class PostService {
 
-async createPost ({postContent, postMedia, group, likes, userMail} ) {
+async createPost ({postContent, group, likes, userMail, filename} ) {
 
         const post = await PostModel.create({
             creator:  userMail,
             postContent: postContent,
-            postMedia: postMedia,
+            // TODO: change img uploade location 
+            img: {
+                data: fs.readFileSync(path.join(__dirname + '../../uploads/' + filename )),
+                contentType: 'image/png'
+            },
             likes: likes
         });
-    
         if(group)
             post.group = group;
         if(likes)
@@ -23,31 +29,12 @@ async getAllPosts () {
     return await PostModel.find({});
 };
 
-// async getPostById (id) {
-    //     return await PostModel.findById(id);
-    // };
-
-// async updatePost (id, postContent) {
-//     const post = await getPostById(id);
-//     if (!post)
-//         return null;
-
-//     post.postContent = postContent;
-//     await post.save();
-//     return post;
-// };
-
-// async deletePost (id) {
-//     const post = await getArticleById(id);
-//     if (!post)
-//         return null;
-
-//     await post.remove();
-//     return post;
-// };  
-
+async deletePost (id) {
+    return await PostModel.findOneAndRemove({id})
 }
 
+
+}
 module.exports = new PostService();
 
 

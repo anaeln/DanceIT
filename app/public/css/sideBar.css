@@ -1,5 +1,8 @@
 .nav-pills > li > a:hover {
-    background-color: black;
+    opacity: 0.5;
 }
-
- 
+#chat{
+    position: fixed;
+    bottom: -4px;
+    right: 10px;
+}

@@ -33,8 +33,17 @@ async deletePost (id) {
     return await PostModel.findOneAndRemove({id})
 }
 
-
+async updatePost (_id, postContent) {
+    const updatedPost = await PostModel.findByIdAndUpdate(
+        _id,
+        {postContent: postContent},
+      );
+      return await updatedPost.save();
+    }
+      
 }
+
+
 module.exports = new PostService();
 
 

@@ -1,5 +1,4 @@
 const path = require('node:path');
-// const tstSchema = require('../models/testModel');
 const PostService = require(path.join(__dirname, '../services/postsService.js'));
 
 class postsController {
@@ -21,11 +20,11 @@ class postsController {
 
 // TODO: need to allow create post without an image - only content
   async createPost (req, res) {
-    const { creator, publishTime, postContent, img, group, likes } = req.body;
+    const { creator, publishTime, postContent, img, likes } = req.body;
       const filename = req.file.filename; 
       const userMail = req.session.userKey;
     try {
-      const newPost = await PostService.createPost({creator, publishTime, postContent, img, group, likes, userMail, filename});
+      const newPost = await PostService.createPost({creator, publishTime, postContent, img, likes, userMail, filename});
       res.redirect('/posts');
     } catch (error) {
       res.render('errorPage', { error });
@@ -39,6 +38,17 @@ class postsController {
     } catch (error) {
       res.render('errorPage', { error });
     }
+
+    async updatePost (req, res) {
+      const postId = req.params;
+      const postContent = req.body.postContent;
+      try {
+        const updatedPost = await PostService.updatePost( postId, postContent );
+        res.redirect('/posts');
+      } catch (error) {
+        res.render('errorPage', { error });
+      }
   }
+}
 
 module.exports = new postsController();

@@ -7,10 +7,8 @@ const postsController = require(path.join(__dirname, '../controllers/postsContro
 
 
 router.get('/posts', authMiddleware, postsController.getAllPosts);
-// router.get('/editPost', authMiddleware, postsController.getAllPosts);
-
 router.post('/posts/create', authMiddleware, upload.single('image'), postsController.createPost);
-router.post('/posts/delete/:id', authMiddleware, postsController.deletePost);
-router.post('/posts/update/:_id', authMiddleware, postsController.updatePost);
+router.post('/posts/delete/:_id', authMiddleware, postsController.deletePost);
+router.post('/posts/update/:_id', authMiddleware, upload.single('image'), postsController.updatePost);
 
 module.exports = router;

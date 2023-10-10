@@ -20,11 +20,11 @@ class postsController {
 
 // TODO: need to allow create post without an image - only content
   async createPost (req, res) {
-    const { creator, publishTime, postContent, img, likes } = req.body;
+    const { creator, publishTime, postContent, likes } = req.body;
       const filename = req.file.filename; 
       const userMail = req.session.userKey;
     try {
-      const newPost = await PostService.createPost({creator, publishTime, postContent, img, likes, userMail, filename});
+      const newPost = await PostService.createPost({creator, publishTime, postContent, likes, userMail, filename});
       res.redirect('/posts');
     } catch (error) {
       res.render('errorPage', { error });
@@ -32,18 +32,22 @@ class postsController {
   }
 
   async deletePost (req, res) {
-    const postId = req.body.id;
-    const postToDelete = await PostService.deletePost(postId);
-    res.redirect('/posts');
+    const postId = req.params;
+    try {
+      const postToDelete = await PostService.deletePost(postId);
+      res.redirect('/posts');
     } catch (error) {
       res.render('errorPage', { error });
     }
+  }
+  
 
-    async updatePost (req, res) {
+  async updatePost (req, res) {
       const postId = req.params;
-      const postContent = req.body.postContent;
+      const editedContent = req.body.editedContent;
+      const filename = req.file?.filename; 
       try {
-        const updatedPost = await PostService.updatePost( postId, postContent );
+        const updatedPost = await PostService.updatePost( postId, editedContent, filename );
         res.redirect('/posts');
       } catch (error) {
         res.render('errorPage', { error });

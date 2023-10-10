@@ -30,19 +30,32 @@ async getAllPosts () {
 };
 
 async deletePost (id) {
-    return await PostModel.findOneAndRemove({id})
+    return await PostModel.findOneAndRemove(id);
 }
 
-async updatePost (_id, postContent) {
-    const updatedPost = await PostModel.findByIdAndUpdate(
-        _id,
-        {postContent: postContent},
-      );
-      return await updatedPost.save();
+async updatePost (_id, postContent, filename) {
+    let updatedPost;
+
+    if(postContent){
+        updatedPost = await PostModel.findByIdAndUpdate(
+            _id,
+            {postContent: postContent}
+            );
     }
-      
+    if (filename) {
+        updatedPost = await PostModel.findByIdAndUpdate(
+            _id,
+            {img: {
+                data: fs.readFileSync(path.join(__dirname + '../../uploads/' + filename )),
+                contentType: 'image/png'
+            }}
+            )
+          }
+    if(updatedPost){
+        return await updatedPost.save();
+      }    
+    } 
 }
-
 
 module.exports = new PostService();
 

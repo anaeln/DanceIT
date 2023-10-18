@@ -18,20 +18,20 @@ class postsController {
   }
 
 
-// TODO: need to allow create post without an image - only content
-  async createPost (req, res) {
+  // TODO: need to allow create post without an image - only content
+  async createPost(req, res) {
     const { creator, publishTime, postContent, likes } = req.body;
-      const filename = req.file.filename; 
-      const userMail = req.session.userKey;
+    const filename = req.file.filename;
+    const userMail = req.session.userKey;
     try {
-      const newPost = await PostService.createPost({creator, publishTime, postContent, likes, userMail, filename});
+      const newPost = await PostService.createPost({ creator, publishTime, postContent, likes, userMail, filename });
       res.redirect('/posts');
     } catch (error) {
       res.render('errorPage', { error });
     }
   }
 
-  async deletePost (req, res) {
+  async deletePost(req, res) {
     const postId = req.params;
     try {
       const postToDelete = await PostService.deletePost(postId);
@@ -40,18 +40,18 @@ class postsController {
       res.render('errorPage', { error });
     }
   }
-  
 
-  async updatePost (req, res) {
-      const postId = req.params;
-      const editedContent = req.body.editedContent;
-      const filename = req.file?.filename; 
-      try {
-        const updatedPost = await PostService.updatePost( postId, editedContent, filename );
-        res.redirect('/posts');
-      } catch (error) {
-        res.render('errorPage', { error });
-      }
+
+  async updatePost(req, res) {
+    const postId = req.params;
+    const editedContent = req.body.editedContent;
+    const filename = req.file?.filename;
+    try {
+      const updatedPost = await PostService.updatePost(postId, editedContent, filename);
+      res.redirect('/posts');
+    } catch (error) {
+      res.render('errorPage', { error });
+    }
   }
 }
 
